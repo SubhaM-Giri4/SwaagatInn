@@ -1,22 +1,33 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom mb-5 sticky-top">
+<nav class="navbar navbar-expand-md navbar-light bg-white sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/"><i class="fa-duotone fa-solid fa-hands-praying fa-lg" style="--fa-primary-color: #572f93; --fa-secondary-color: #572f93;"></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/listings">
+            <i class="fa-solid fa-plane-departure"></i> SwaagatInn
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/listings">All Listing</a>
-                <a class="nav-link" href="/listings/new">Add New Listing</a>
+            <div class="navbar-nav me-auto">
+                <a class="nav-link" href="/listings"><i class="fa-solid fa-map-location-dot"></i> Explore</a>
+                <a class="nav-link" href="/listings/new"><i class="fa-solid fa-plus-circle"></i> Add New Places</a>
+                <a class="nav-link" href="/guides"><i class="fa-solid fa-book-open"></i> Travel Guides</a>
             </div>
-            <div class="navbar-nav ms-auto" >
+
+            <form class="d-flex mx-3" role="search" action="/search" method="GET">
+                <input class="form-control me-2" type="search" name="q" placeholder="Search destinations..." aria-label="Search">
+                <button class="btn btn-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="navbar-nav">
                 <% if(!currUser){ %>
-                <a class="nav-link" href="/signup">Sign up</a>
-                <a class="nav-link" href="/login">Log in</a>
+                <a class="nav-link btn btn-outline-primary btn-lg mx-3" href="/signup">
+                    <b>Sign Up</b>
+                </a>
+                <a class="nav-link btn btn-primary btn-sm mx-1" href="/login"><b>Log In</b></a>
                 <% } else { %>
-                <a class="nav-link" href="/logout">Log out</a>
-                <%}%>
+                <a class="nav-link btn btn-danger btn-sm mx-1" href="/logout"><b>Log Out</b></a>
+                <% } %>
             </div>
         </div>
     </div>
