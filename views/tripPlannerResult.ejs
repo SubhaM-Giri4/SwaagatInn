@@ -1,0 +1,11 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Your AI Trip Itinerary for <%= destination %></h2>
+    <div class="p-4 rounded shadow" style="background: #f8f4ff;">
+        <pre style="white-space: pre-wrap; font-family: 'Segoe UI', sans-serif;"><%= itinerary %></pre>
+    </div>
+    <div class="text-center mt-4">
+        <a href="/trip-planner" class="btn btn-secondary">Plan Another Trip</a>
+    </div>
+</div>

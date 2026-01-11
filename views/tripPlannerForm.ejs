@@ -1,0 +1,20 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">AI Trip Planner</h2>
+    <form action="/trip-planner" method="POST" class="w-50 mx-auto">
+        <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" name="destination" required>
+        </div>
+        <div class="mb-3">
+            <label for="days" class="form-label">Number of Days</label>
+            <input type="number" class="form-control" id="days" name="days" required>
+        </div>
+        <div class="mb-3">
+            <label for="interests" class="form-label">Interests (comma separated)</label>
+            <input type="text" class="form-control" id="interests" name="interests" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Generate Itinerary</button>
+    </form>
+</div>
