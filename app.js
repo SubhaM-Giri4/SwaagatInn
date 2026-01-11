@@ -82,6 +82,9 @@ const sessionOptions = {
 //     res.send("Hi, I am root");
 // });
 //no need of root
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
