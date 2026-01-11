@@ -1,17 +1,85 @@
 <% layout('/layouts/boilerplate') -%>
 
-<div class="flex justify-center items-center min-h-screen">
-    <form action="/login" method="POST" class="bg-white p-6 rounded-lg shadow-lg w-80">
-        <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+<style>
+    body {
+        background: linear-gradient(to right, #f3e8ff, #ffffff, #f3e8ff);
+    }
 
-        <label for="username" class="block font-semibold">Username</label>
-        <input type="text" id="username" name="username" class="w-full border rounded p-2 mb-3" required>
+    .login-card {
+        background: linear-gradient(145deg, #f8f5ff, #ffffff);
+        border: 1px solid #e2d6f7;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        width: 380px;
+    }
 
-        <label for="password" class="block font-semibold">Password</label>
-        <input type="password" id="password" name="password" class="w-full border rounded p-2 mb-3" required>
+    .login-card h2 {
+        font-weight: 800;
+        color: #333;
+    }
 
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
-            Login
-        </button>
-    </form>
+    .login-card p {
+        color: #666;
+    }
+
+    .login-card input {
+        border-radius: 10px;
+        padding-left: 2.5rem;
+    }
+
+    .login-card .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+    .login-btn {
+        background-color: #6f42c1;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background-color: #59359c;
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="login-card">
+        <!-- Icon + Title -->
+        <div class="text-center mb-4">
+            <i class="fa-solid fa-user-lock fa-3x mb-3 text-primary"></i>
+            <h2>Welcome Back</h2>
+            <p>Login to your SwaagatInn account</p>
+        </div>
+
+        <!-- Form -->
+        <form action="/login" method="POST">
+            <div class="mb-3 position-relative">
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+            </div>
+
+            <div class="mb-3 position-relative">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 login-btn">Log In</button>
+        </form>
+
+        <!-- Footer Links -->
+        <div class="text-center mt-4">
+            <small>Don't have an account?
+                <a href="/signup" class="fw-bold text-primary">Sign Up</a>
+            </small>
+            <br>
+            <small>
+                <a href="/forgot-password" class="text-muted">Forgot Password?</a>
+            </small>
+        </div>
+    </div>
 </div>

@@ -1,27 +1,85 @@
 <% layout('/layouts/boilerplate') -%>
 
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="col-md-4">
+<style>
+    body {
+        background: linear-gradient(to right, #f3e8ff, #ffffff, #f3e8ff);
+    }
+
+    .signup-card {
+        background: linear-gradient(145deg, #f8f5ff, #ffffff);
+        border: 1px solid #e2d6f7;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        width: 400px;
+    }
+
+    .signup-card h2 {
+        font-weight: 800;
+        color: #333;
+    }
+
+    .signup-card p {
+        color: #666;
+    }
+
+    .signup-card input {
+        border-radius: 10px;
+        padding-left: 2.5rem;
+    }
+
+    .signup-card .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+    .signup-btn {
+        background-color: #6f42c1;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    .signup-btn:hover {
+        background-color: #59359c;
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="signup-card">
+        <!-- Icon + Title -->
+        <div class="text-center mb-4">
+            <i class="fa-solid fa-user-plus fa-3x mb-3 text-primary"></i>
+            <h2>Create Account</h2>
+            <p>Join SwaagatInn and start your journey</p>
+        </div>
+
+        <!-- Form -->
         <form action="/signup" method="POST" class="needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+            <div class="mb-3 position-relative">
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
             </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+            <div class="mb-3 position-relative">
+                <i class="fa-solid fa-envelope icon"></i>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+            <div class="mb-3 position-relative">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            <button type="submit" class="btn btn-primary w-100 signup-btn">Sign Up</button>
+
             <!-- Login link -->
             <div class="text-center mt-3">
-                <small>Already have an account? <a href="/login">Login</a></small>
+                <small>Already have an account?
+                    <a href="/login" class="fw-bold text-primary">Login</a>
+                </small>
             </div>
         </form>
     </div>
