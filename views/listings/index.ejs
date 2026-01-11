@@ -1,4 +1,12 @@
 <% layout('/layouts/boilerplate') -%>
+<div class="container my-5">
+    <div class="text-center p-4 rounded shadow" style="background: linear-gradient(90deg, #6f42c1, #dcb6ff); color:white;">
+        <i class="fa-solid fa-robot fa-2x mb-2"></i>
+        <h3>AI Trip Planner</h3>
+        <p>Create a personalized itinerary based on your preferences.</p>
+        <a href="/trip-planner" class="btn btn-light mt-2">Plan Your Trip</a>
+    </div>
+</div>
 
 <body>
 <h2 class="page-title">Discover Hidden Gems of India</h2>
@@ -12,7 +20,7 @@
                 <h3 class="card-title"><%= listing.title %></h3>
                 <p class="card-desc"><%= listing.description %></p>
                 <p class="card-location"><%= listing.location %>, <%= listing.country %></p>
-                <p class="card-price">₹ <%= listing.price %> / night</p>
+                <p class="card-price">Approx   ₹ <%= listing.price %> / day</p>
             </div>
         </div>
     </a>
