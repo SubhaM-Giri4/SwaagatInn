@@ -2,49 +2,167 @@ body {
     padding: 0 !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .navbar {
-    height: 5rem;
-    width: 100%;
-    background: linear-gradient(90deg, #3A225D, #463168);
+    min-height: 4.5rem;
+    padding: 0 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem ;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #f5d142;
     font-size: 1.8rem;
     font-weight: bold;
+    color: #5a2a83;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-brand i {
+    font-size: 34px;
+    margin-right: 8px;
+    color: #5a2a83;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333 !important;
+    margin-left: 1.2rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 6px;
+}
+
+.nav-link:hover {
+    color: #7a4ebf !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .btn {
+    margin-left: 1rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn:hover {
+    transform: translateY(-2px);
+}
+
+
+form input[type="search"] {
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #7a4ebf;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.45rem 1rem;
+}
+
+form button:hover {
+    background-color: #5a2a83;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav a {
+        margin: 5px 0;
+    }
+
+    form input[type="search"] {
+        width: 150px;
+    }
+}
+.navbar {
+    height: 6rem;
+    padding: 0 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a2a83;
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
 .navbar-brand i {
     font-size: 40px;
     margin-right: 10px;
+    color: #5a2a83;
 }
 
 .nav-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white !important;
-    margin-left: 1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333 !important;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 8px;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
-    color: #ffd700 !important;
+    color: #7a4ebf !important;
+    transform: scale(1.05);
 }
 
-.nav-items {
-    display: flex;
-    align-items: center;
+.navbar-nav .btn {
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn:hover {
+    transform: translateY(-2px);
+}
+
+form input[type="search"] {
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #7a4ebf;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.45rem 1rem;
+}
+
+form button:hover {
+    background-color: #5a2a83;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav a {
+        margin: 5px 0;
+    }
+
+    form input[type="search"] {
+        width: 150px;
+    }
 }
 
 
